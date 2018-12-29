@@ -12,15 +12,18 @@ function createClock(ctor: ClockConstructor, hour: number, minute: number): Cloc
 class DigitalClock implements ClockInterface {
     constructor(h: number, m: number) { }
     tick() {
-        console.log("beep beep");
+        return "beep beep";
     }
 }
 class AnalogClock implements ClockInterface {
     constructor(h: number, m: number) { }
     tick() {
-        console.log("tick tock");
+        return "tick tock";
     }
 }
 
 let digital = createClock(DigitalClock, 12, 17);
 let analog = createClock(AnalogClock, 7, 32);
+setTimeout(() => {
+    location.reload(true);
+}, 3000);

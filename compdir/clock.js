@@ -5,14 +5,19 @@ function createClock(ctor, hour, minute) {
 class DigitalClock {
     constructor(h, m) { }
     tick() {
-        console.log("beep beep");
+        return "beep beep";
     }
 }
 class AnalogClock {
     constructor(h, m) { }
     tick() {
-        console.log("tick tock");
+        return "tick tock";
     }
 }
 let digital = createClock(DigitalClock, 12, 17);
 let analog = createClock(AnalogClock, 7, 32);
+setTimeout(() => {
+    console.log(1);
+    location.reload(true);
+
+}, 5000);
